@@ -38,6 +38,6 @@ void clearList(UnsignedNode* node)
 	if (node->_next)
 	{
 		clearList(node->_next);
-		delete(node);
+		delete node;
 	}
 }
