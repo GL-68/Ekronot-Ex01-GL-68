@@ -145,8 +145,9 @@
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ex1Part1Test_local.cpp" />
+    <ClCompile Include="Ex1Part2Test_local.cpp" />
     <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="Utils.cpp" />

@@ -25,7 +25,7 @@ void removeHead(UnsignedNode** head)
 
 bool isEmpty(UnsignedNode* head)
 {
-	return (bool)head;
+	return head == nullptr;
 }
 
 unsigned int getData(UnsignedNode* node)
@@ -33,11 +33,13 @@ unsigned int getData(UnsignedNode* node)
 	return node->_data;
 }
 
-void clearList(UnsignedNode* node)
+void clearList(UnsignedNode* head)
 {
-	if (node->_next)
+	UnsignedNode* temp = nullptr;
+	while (head)
 	{
-		clearList(node->_next);
-		delete node;
+		temp = head->_next;
+		delete head;
+		head = temp;
 	}
 }

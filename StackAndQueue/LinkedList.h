@@ -43,7 +43,7 @@ unsigned int getData(UnsignedNode* node);
 
 /**
  * @brief clears a list
- * @param node head of the list (node to work from - recursive function)
+ * @param head head of the list
  */
 void clearList(UnsignedNode* head);
 
