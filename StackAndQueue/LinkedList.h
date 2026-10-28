@@ -19,13 +19,13 @@ UnsignedNode* makeNode(unsigned int data);
  * @param head head of the list
  * @param data data for the node
  */
-void addAsHead(UnsignedNode* head, unsigned int data);
+void addAsHead(UnsignedNode** head, unsigned int data);
 
 /**
  * @brief removes the head node of the list and resettles the head pointer
  * @param head head of the list
  */
-void removeHead(UnsignedNode* head);
+void removeHead(UnsignedNode** head);
 
 /**
  * @brief returns whether a list is empty

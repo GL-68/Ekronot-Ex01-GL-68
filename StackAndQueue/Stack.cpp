@@ -1,8 +1,9 @@
 #include "Stack.h"
+#include "LinkedList.h"
 
 void push(Stack* s, unsigned int element)
 {
-	addAsHead(s->_top, element);
+	addAsHead(&s->_top, element);
 }
 
 int pop(Stack* s)
@@ -11,8 +12,9 @@ int pop(Stack* s)
 	if (!isEmpty(s->_top))
 	{
 		temp = getData(s->_top);
-		removeHead(s->_top);
+		removeHead(&s->_top);
 	}
+	return temp;
 }
 
 void initStack(Stack* s)

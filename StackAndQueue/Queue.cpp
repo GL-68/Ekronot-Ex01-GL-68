@@ -3,14 +3,15 @@
 void initQueue(Queue* q, unsigned int size)
 {
 	q = new Queue;
-	q->_head = new unsigned int[size];
+	q->_array = new unsigned int[size];
+	q->_head = q->_array;
 	q->_maxSize = size;
 	q->_count = 0;
 }
 
 void cleanQueue(Queue* q)
 {
-	delete[] q->_head;
+	delete[] q->_array;
 }
 
 void enqueue(Queue* q, unsigned int newValue)
@@ -28,10 +29,7 @@ int dequeue(Queue* q)
 	if (q->_count)
 	{
 		temp = *(q->_head);
-		for (int i = 0; i < q->_count;)
-		{
-			q->_head[i] = q->_head[++i];
-		}
+		(q->_head)++;
 	}
 	return temp;
 }
