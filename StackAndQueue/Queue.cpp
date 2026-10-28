@@ -1,8 +1,8 @@
 #include "Queue.h"
+#define OFFSET 1
 
 void initQueue(Queue* q, unsigned int size)
 {
-	q = new Queue;
 	q->_array = new unsigned int[size];
 	q->_head = q->_array;
 	q->_maxSize = size;
@@ -18,7 +18,7 @@ void enqueue(Queue* q, unsigned int newValue)
 {
 	if (q->_count < q->_maxSize)
 	{
-		q->_head[q->_count] = newValue;
+		q->_array[(q->_head - q->_array + q->_count) % q->_maxSize] = newValue;
 		q->_count++;
 	}
 }
@@ -29,8 +29,14 @@ int dequeue(Queue* q)
 	if (q->_count)
 	{
 		temp = *(q->_head);
+		*q->_head = 0;
 		(q->_head)++;
+		if (q->_head >= q->_array + q->_maxSize)
+		{
+			q->_head = q->_array;
+		}
 	}
+	(q->_count)--;
 	return temp;
 }
 
