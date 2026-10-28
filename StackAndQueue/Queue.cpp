@@ -1,5 +1,4 @@
 #include "Queue.h"
-#define OFFSET 1
 
 void initQueue(Queue* q, unsigned int size)
 {
