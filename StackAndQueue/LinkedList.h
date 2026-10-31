@@ -10,7 +10,7 @@ typedef struct UnsignedNode
 /**
  * @brief creates a new node with a given data value
  * @param data data value for node
- * @return the new node
+ * @return UnsignedNode*: the new node
  */
 UnsignedNode* makeNode(unsigned int data);
 
@@ -30,14 +30,14 @@ void removeHead(UnsignedNode** head);
 /**
  * @brief returns whether a list is empty
  * @param head head of the list
- * @return true if the list is empty, else false
+ * @return bool: true if the list is empty, else false
  */
 bool isEmpty(UnsignedNode* head);
 
 /**
  * @brief returns the data of a node
  * @param node node containing an unsigned int
- * @return unsigned int of what is contained within the node
+ * @return unsigned int: node content
  */
 unsigned int getData(UnsignedNode* node);
 

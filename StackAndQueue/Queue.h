@@ -34,21 +34,21 @@ void enqueue(Queue* q, unsigned int newValue);
 /**
  * @brief function that removes an element from the queue
  * @param q queue to remove from
- * @return -1 if the queue was already empty (failure), else the value of the removed element
+ * @return int: -1 if the queue was already empty (failure), else the value of the removed element
  */
 int dequeue(Queue* q);
 
 /**
  * @brief function that returns whether the queue is empty
  * @param s queue to be checked
- * @return true if queue is empty, else false
+ * @return bool: true if queue is empty, else false
  */
 bool isEmpty(Queue* s);
 
 /**
  * @brief function that returns whether the queue is full
  * @param s queue to be checked
- * @return true if the queue is full, else false
+ * @return bool: true if the queue is full, else false
  */
 bool isFull(Queue* s);
 
